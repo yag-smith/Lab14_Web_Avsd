@@ -10,7 +10,7 @@ export default function Home() {
     <div className="container mx-auto px-4 py-12">
       {/* Hero Section */}
       <section className="text-center mb-20">
-        <div className="relative w-32 h-32 mx-auto mb-6">
+        <div className="avatar-ring relative w-32 h-32 mx-auto mb-8 rounded-full">
           <Image
             src={personalInfo.avatar}
             alt={personalInfo.name}
@@ -20,26 +20,20 @@ export default function Home() {
             sizes="128px"
           />
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+        <h1 className="font-display text-4xl md:text-6xl font-bold text-gradient mb-4">
           {personalInfo.name}
         </h1>
-        <p className="text-xl md:text-2xl text-gray-600 mb-6">
+        <p className="font-display text-xl md:text-2xl neon-cyan mb-6">
           {personalInfo.title}
         </p>
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+        <p className="text-lg text-dim max-w-2xl mx-auto mb-8">
           {personalInfo.description}
         </p>
         <div className="flex gap-4 justify-center">
-          <Link
-            href="/projects"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
-          >
+          <Link href="/projects" className="btn-neon btn-pink">
             Ver Proyectos
           </Link>
-          <Link
-            href="/about"
-            className="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300 transition"
-          >
+          <Link href="/about" className="btn-neon btn-cyan">
             Sobre Mí
           </Link>
         </div>
@@ -47,7 +41,7 @@ export default function Home() {
 
       {/* Featured Projects */}
       <section>
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        <h2 className="font-display text-3xl font-bold neon-pink mb-8 text-center">
           Proyectos Destacados
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -10,7 +10,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="group block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+      className="card-neon group block overflow-hidden"
     >
       <div className="relative h-48 overflow-hidden">
         {/* Imágenes con lazy loading */}
@@ -22,20 +22,21 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           className="object-cover group-hover:scale-105 transition-transform duration-300"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0118] via-transparent to-transparent opacity-70" />
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+        <h3 className="card-title text-xl font-bold font-display mb-2 transition-colors">
           {project.title}
         </h3>
-        <p className="text-gray-600 mb-4 line-clamp-2">{project.description}</p>
+        <p className="text-dim mb-4 line-clamp-2">{project.description}</p>
         <div className="flex flex-wrap gap-2">
           {project.technologies.slice(0, 3).map((tech) => (
-            <span key={tech} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
+            <span key={tech} className="tag-neon text-xs px-2 py-1">
               {tech}
             </span>
           ))}
           {project.technologies.length > 3 && (
-            <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
+            <span className="tag-neon text-xs px-2 py-1">
               +{project.technologies.length - 3}
             </span>
           )}

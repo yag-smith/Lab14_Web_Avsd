@@ -22,11 +22,11 @@ export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Sobre Mí</h1>
+        <h1 className="font-display text-4xl font-bold text-gradient mb-8">Sobre Mí</h1>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="md:col-span-1">
-            <div className="relative w-full aspect-square rounded-lg overflow-hidden">
+            <div className="media-neon relative w-full aspect-square rounded-lg overflow-hidden">
               <Image
                 src={personalInfo.avatar}
                 alt={personalInfo.name}
@@ -38,10 +38,10 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="md:col-span-2">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="font-display text-2xl font-bold neon-pink mb-4">
               ¡Hola! Soy {personalInfo.name}
             </h2>
-            <div className="prose text-gray-700 space-y-4">
+            <div className="text-dim space-y-4 leading-relaxed">
               <p>
                 Soy un desarrollador full stack apasionado por crear experiencias
                 web excepcionales. Con más de X años de experiencia, me especializo
@@ -61,18 +61,14 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Skills Section con lazy loading implícito */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          <h2 className="font-display text-3xl font-bold neon-cyan mb-6">
             Habilidades Técnicas
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {skills.map((skill) => (
-              <div
-                key={skill}
-                className="bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow"
-              >
-                <p className="font-semibold text-gray-800">{skill}</p>
+              <div key={skill} className="card-neon p-4 text-center">
+                <p className="font-display text-sm font-semibold text-[#d9b3ff]">{skill}</p>
               </div>
             ))}
           </div>

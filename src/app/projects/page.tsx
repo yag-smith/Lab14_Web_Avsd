@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Mis Proyectos</h1>
-      <p className="text-lg text-gray-600 mb-12">
+      <h1 className="font-display text-4xl font-bold text-gradient mb-4">Mis Proyectos</h1>
+      <p className="text-lg text-dim mb-12">
         Una colección de proyectos en los que he trabajado
       </p>
 

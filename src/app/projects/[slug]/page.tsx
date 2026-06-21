@@ -52,19 +52,16 @@ export default async function ProjectDetailPage({ params }: Props) {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <Link
-        href="/projects"
-        className="text-blue-600 hover:underline mb-6 inline-block"
-      >
+      <Link href="/projects" className="link-neon font-display text-sm mb-6 inline-block">
         ← Volver a Proyectos
       </Link>
 
       <article>
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        <h1 className="font-display text-4xl font-bold text-gradient mb-6">
           {project.title}
         </h1>
 
-        <div className="relative w-full h-96 mb-8 rounded-lg overflow-hidden">
+        <div className="media-neon relative w-full h-96 mb-8 rounded-lg overflow-hidden">
           <Image
             src={project.image}
             alt={project.title}
@@ -75,18 +72,15 @@ export default async function ProjectDetailPage({ params }: Props) {
           />
         </div>
 
-        <p className="text-lg text-gray-700 mb-6">{project.description}</p>
+        <p className="text-lg text-dim mb-6">{project.description}</p>
 
         <div className="mb-6">
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">
+          <h2 className="font-display text-2xl font-bold neon-cyan mb-3">
             Tecnologías Utilizadas
           </h2>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
-              <span
-                key={tech}
-                className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
-              >
+              <span key={tech} className="tag-neon px-3 py-1 text-sm">
                 {tech}
               </span>
             ))}
@@ -95,21 +89,19 @@ export default async function ProjectDetailPage({ params }: Props) {
 
         <div className="flex gap-4">
           {project.demoUrl && (
-            <a
-              href={project.demoUrl}
+            <a href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+              className="btn-neon btn-pink"
             >
               Ver Demo
             </a>
           )}
           {project.githubUrl && (
-            <a
-              href={project.githubUrl}
+            <a href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition"
+              className="btn-neon btn-cyan"
             >
               Ver Código
             </a>
